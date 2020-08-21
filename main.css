@@ -88,6 +88,54 @@ a:hover{
 	height:60%;
 }
 
+#thermostat_inspect{
+	padding:10px;
+	margin:10px 50px;
+	background: #00008b;
+	color: lightblue;
+	border: solid #00008b 1px;
+}
+
+#thermostat_inspect:hover{
+	background: lightblue;
+	color: #00008b;
+	border: solid lightblue 1px;
+	transition-duration: 200ms;
+}
+
+#thermostat_github{
+	padding:10px;
+	margin:10px 50px;
+	background: black;
+	color: white;
+	border: solid black 1px;
+}
+
+#thermostat_github:hover{
+	background:lightblue;
+	color: black;
+	border: solid lightblue 1px;
+	transition-duration: 200ms;
+}
+
+#thermostat_button{
+	text-align:center;
+}
+
+#thermostat_goback{
+	padding:10px;
+	background: #00008b;
+	color: lightblue;
+	border: solid #00008b 1px;
+}
+
+#thermostat_goback:hover{
+	background: lightblue;
+	color: #00008b;
+	border: solid lightblue 1px;
+	transition-duration: 200ms;
+}
+
 #footer{
 	position: relative;
   	left: 0;
