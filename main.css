@@ -37,18 +37,36 @@ body{
 	align-items:flex-end;
 }
 
-/*
-img{
-	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
+#thermostat_image{
+	display:flex;
+	justify-content: center;
+	align-items:flex-end;
 }
-*/
+
+#thermostat_text{
+	display:flex;
+	justify-content: center;
+	align-items:flex-end;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color:black;
+	transition-duration: 200ms;
+}
+
+#thermostatImg{
+	width:60%;
+	height:60%;
+}
 
 #footer{
-	position: fixed;
+	position: relative;
   	left: 0;
-  	bottom: 0;
+	bottom: 0;
 	width: 100%;
 	height:9vh;
 	line-height: 9vh;
