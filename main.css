@@ -11,6 +11,13 @@ body{
 	background-color: #00008b;
 }
 
+@media only screen and (max-width: 768px) {
+	#navbar{
+		text-align:center;
+		width:100vw;
+	}
+}
+
 #navbar a{
 	display: inline-block;
 	text-decoration: none;
@@ -31,10 +38,28 @@ body{
 	align-items:flex-end;
 }
 
+@media only screen and (max-width: 768px) {
+	#person_image{
+		width:65%;
+		height:65%;
+	}
+}
+
+#person_text::before {
+    content: open-quote;
+}
+::after {
+    content: close-quote;
+}
+
 #person_text{
 	display:flex;
 	justify-content: center;
 	align-items:flex-end;
+}
+
+#person_text::after {
+    content: close-quote;
 }
 
 #thermostat_image{
