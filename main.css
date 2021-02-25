@@ -9,20 +9,20 @@ body{
 	margin:auto;
 }
 
-#navbar{
+.navbar{
 	height: 9vh;
 	width: 100%;
 	background-color: #00008b;
 }
 
 @media only screen and (max-width: 768px) {
-	#navbar{
+	.navbar{
 		text-align:center;
 		width:100vw;
 	}
 }
 
-#navbar a{
+.navbar a{
 	display: inline-block;
 	text-decoration: none;
 	color: lightblue;
@@ -30,7 +30,7 @@ body{
 	line-height: 9vh;
 }
 
-#navbar a:hover{
+.navbar a:hover{
 	background-color: lightblue;
 	transition-duration: 200ms;
 	color: #00008b;
@@ -51,7 +51,7 @@ body{
 
 #person_text{
 	display:flex;
-	justify-content: center;
+	justify-content:center;
 	align-items:flex-end;
 }
 
