@@ -1,145 +1,66 @@
 body{
-	color: #00008b;
-	background:linear-gradient(45deg, lightblue 0%, teal 80%);
-	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	font-family: sans-serif;
-	margin:auto;
+	--accent-color:#35495e;
+	--background-color:#42b88e;
+	--text-color:#35495e;
+	--transition-delay:1s;
+	transition: var(--transition-delay);
+	background-color: var(--background-color) !important;
+	color:var(--text-color);
 }
 
-.navbar{
-	height: 9vh;
-	width: 100%;
-	background-color: #00008b;
+body.ruby-theme{
+	--accent-color:#820c02;
+	--background-color: #fff;
+	--text-color:#820c02;
+	transition: var(--transition-delay);
+	background-color: var(--background-color) !important;
+	color:var(--text-color);
 }
 
-@media only screen and (max-width: 768px) {
-	.navbar{
-		text-align:center;
-		width:100vw;
-	}
+.nav-link{
+	background-color:var(--background-color);
+	color:var(--text-color);
+	transition: var(--transition-delay);
 }
 
-.navbar a{
-	display: inline-block;
-	text-decoration: none;
-	color: lightblue;
-	padding: 0 15px;
-	line-height: 9vh;
+.nav-link:hover{
+	background-color:var(--text-color);
+	color:var(--background-color);
 }
 
-.navbar a:hover{
-	background-color: lightblue;
-	transition-duration: 200ms;
-	color: #00008b;
+.vue{
+	opacity:1;
 }
 
-#person_image{
-	display:flex;
-	justify-content: center;
-	align-items:flex-end;
+.rails{
+	opacity:0;
 }
 
-@media only screen and (max-width: 768px) {
-	#person_image{
-		width:65%;
-		height:65%;
-	}
+.ruby-theme .vue{
+	opacity:0;
 }
 
-#person_text{
-	display:flex;
-	justify-content:center;
-	align-items:flex-end;
+.ruby-theme .rails{
+	opacity:1;
 }
 
-#person_text::after {
-    content: close-quote;
+/*
+.theme-toggle-button{
+	background-color: var(--background-color) !important;
+	color:var(--text-color) !important;
+	transition-duration: var(--transition-delay);
+	transform: scale(1);
+	cursor: pointer;
+	padding: 5px;
+	border-radius: .3em;
+	border:none;
+	outline:none;
 }
 
-#thermostat_image{
-	display:flex;
-	justify-content: center;
-	align-items:flex-end;
+.theme-toggle-button:hover,
+.theme-toggle-button:focus{
+	background-color: var(--text-color) !important;
+	color:var(--background-color) !important;
+	transform: scale(1.1);
 }
-
-#thermostat_text{
-	margin:auto;
-	width:50%;
-}
-
-a{
-	text-decoration: none;
-}
-
-a:hover{
-	color:black;
-	transition-duration: 200ms;
-}
-
-#thermostatImg{
-	width:60%;
-	height:60%;
-}
-
-#thermostat_inspect{
-	padding:10px;
-	margin:10px 50px;
-	background: #00008b;
-	color: lightblue;
-	border: solid #00008b 1px;
-}
-
-#thermostat_inspect:hover{
-	background: lightblue;
-	color: #00008b;
-	border: solid lightblue 1px;
-	transition-duration: 200ms;
-}
-
-#thermostat_github{
-	padding:10px;
-	margin:10px 50px;
-	background: black;
-	color: white;
-	border: solid black 1px;
-}
-
-#thermostat_github:hover{
-	background:lightblue;
-	color: black;
-	border: solid lightblue 1px;
-	transition-duration: 200ms;
-}
-
-#thermostat_button{
-	text-align:center;
-}
-
-#thermostat_goback{
-	padding:10px;
-	background: #00008b;
-	color: lightblue;
-	border: solid #00008b 1px;
-}
-
-#thermostat_goback:hover{
-	background: lightblue;
-	color: #00008b;
-	border: solid lightblue 1px;
-	transition-duration: 200ms;
-}
-
-#footer{
-	position: relative;
-  	left: 0;
-	bottom: 0;
-	width: 100%;
-	height:9vh;
-	line-height: 9vh;
-  	background-color: #00008b;
-  	color: lightblue;
-  	text-align: center;
-}
+*/
