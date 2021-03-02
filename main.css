@@ -4,13 +4,23 @@
 	box-sizing: border-box;	
 }
 
+:root{
+	--clock-height-and-weight:400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  :root{
+		--clock-height-and-weight:40vw;
+	}
+}
+
 body{
 	height: 100%;
 	width: 100%;
 	--accent-color:#35495e;
 	--background-color-1:#42b88e;
 	--background-color-2:#429ab8;
-	--text-color:#253341;
+	--text-color:#1c2631;
 	--transition-delay:1s;
 	transition: var(--transition-delay);
 	background-image: linear-gradient(135deg, var(--background-color-1), var(--background-color-2)) !important;
@@ -56,14 +66,20 @@ body.ruby-theme{
 	display:inline;
 }
 
+.clock-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 .clock{
 	display: flex;
 	justify-content:center;
 	align-items: center;
 	position:relative;
-	width: 400px;
-	height: 400px;
-	border: 8px solid var(--accent-color);
+	width: var(--clock-height-and-weight);
+	height: var(--clock-height-and-weight);
+	border: calc(var(--clock-height-and-weight) / 50) solid var(--accent-color);
 	border-radius: 50%;
 }
 
@@ -71,8 +87,8 @@ body.ruby-theme{
 	z-index: 10000;
 	content: '';
 	position: absolute;
-	width:15px;
-	height:15px;
+	width:calc(var(--clock-height-and-weight) / 25);
+	height:calc(var(--clock-height-and-weight) / 25);
 	background-color: var(--accent-color);
 	border-radius: 50%;
 }
@@ -82,18 +98,18 @@ body.ruby-theme{
 }
 
 .hour, .hr{
-	height: 200px;
-	width: 200px;
+	height: calc(var(--clock-height-and-weight) / 2);
+	width: calc(var(--clock-height-and-weight) / 2);
 }
 
 .min, .mn{
-	height: 230px;
-	width: 230px;
+	height: calc((var(--clock-height-and-weight) / 2) * 1.15);
+	width: calc((var(--clock-height-and-weight) / 2) * 1.15);
 }
 
 .sec, .sc{
-	height: 250px;
-	width: 250px;
+	height: calc((var(--clock-height-and-weight) / 2) * 1.25);
+	width: calc((var(--clock-height-and-weight) / 2) * 1.25);
 }
 
 .hr, .mn, .sc{
@@ -105,24 +121,24 @@ body.ruby-theme{
 .hr::before{
 	content: '';
 	position: absolute;
-	width: 8px;
-	height: 100px;
+	width: calc(var(--clock-height-and-weight) / 50);
+	height: calc(var(--clock-height-and-weight) / 4);
 	background: var(--accent-color);
 }
 
 .mn::before{
 	content: '';
 	position: absolute;
-	width: 4px;
-	height: 110px;
+	width: calc(var(--clock-height-and-weight) / 100);
+	height: calc((var(--clock-height-and-weight) / 4) * 1.1);
 	background: var(--accent-color);
 }
 
 .sc::before{
 	content: '';
 	position: absolute;
-	width: 2px;
-	height: 120px;
+	width: calc(var(--clock-height-and-weight) / 200);
+	height: calc((var(--clock-height-and-weight) / 4) * 1.2);
 	background: var(--text-color);
 }
 
@@ -130,6 +146,6 @@ body.ruby-theme{
 	display:flex;
 	justify-content: center;
 	color:var(--accent-color);
-	font-size: 4em;
+	font-size: calc(var(--clock-height-and-weight) / 6.25);
 	margin-top: 20px;
 }
