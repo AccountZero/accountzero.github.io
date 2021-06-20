@@ -23,11 +23,36 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
-      defer></script>
-      <script src="script.js" defer></script>
-      <title>Home</title>
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Home</title>
   </head>
   <body>
+
+    <div class="position-relative">
+      <div class="position-absolute top-0 end-0 m-3">
+        <div class="clock-container">
+          <div class="clock">
+            <div class="hour">
+              <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+              <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+              <div class="sc" id="sc"></div>
+            </div>
+          </div>
+        </div>
+        <div id="digitalClock">
+          <div id="hour"></div>
+          <div id="minutes"></div>
+          <div id="seconds"></div>
+        </div>
+      </div>
+    </div>
+
     <ul class="nav sticky-top nav justify-content-center">
       <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
@@ -46,42 +71,50 @@
       </li>
     </ul>
 
-    <h1 class="display-1 text-center m-2">This is the site of Hubert</h1>
-    <p class="text-center">This is a website, which is actually under reconstruction. I will try to make the website more entertainable</p>
+    <h1 class="display-1 text-center m-2">Welcome to my website !</h1>
     <p class="text-center">
-      Chosen theme: 
-      <svg class="vue" style="width:24px;height:24px" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M2,3H5.5L12,15L18.5,3H22L12,21L2,3M6.5,3H9.5L12,7.58L14.5,3H17.5L12,13.08L6.5,3Z" />
+      Hello fellow reader. This site is under developement, therefore you might see some unfinished work for now. It is a coincidence, that you have found this website.
+    </p>
+    <p class="text-center">
+      Chosen theme:
+      <svg class="vue" style="width: 24px; height: 24px" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M2,3H5.5L12,15L18.5,3H22L12,21L2,3M6.5,3H9.5L12,7.58L14.5,3H17.5L12,13.08L6.5,3Z"
+        />
       </svg>
-      <svg class="rails" style="width:24px;height:24px" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19.8,16.7C19.8,16.7 21.6,16.5 21.6,14.3C21.6,12.1 19.5,11.8 19.5,11.8H15.7V19H17.6V17.3L19.3,19H22L19.8,16.7M19,15.3H17.5V13.7H19C19,13.7 19.4,13.9 19.4,14.5C19.5,15.1 19,15.3 19,15.3M21.3,8.2V8.4C13.2,6.1 10,13.2 10.6,18.7C10.6,18.7 4.9,18.7 4.3,18.7C5,13.3 11.8,2.6 21.3,8.2M20.5,6.9C19.8,6.6 19.1,6.3 18.4,6.1L18.5,4.8L20.6,5.6L20.5,6.9M18.5,8.7C19.2,8.7 19.9,8.8 20.6,9L20.5,10.2L18.7,10L18.5,8.7M13.9,5.8L13.5,4.6L15.6,4.4L16,5.7C15.8,5.7 14.1,5.8 13.9,5.8M15.2,9.5C15.6,9.3 16.3,9 17.2,8.8L17.6,10L15.8,10.7L15.2,9.5M11.8,6.5C11.2,6.8 10.6,7.1 10,7.5L9.2,6.2L11,5.2L11.8,6.5M14.3,10.1L15.1,11.3L14,12.6L12.9,11.6C13.2,11 13.7,10.5 14.3,10.1M11.6,15C11.7,14.2 11.9,13.5 12.2,12.7L13.4,13.7L13.1,15.6L11.6,15M7.9,9.3C7.4,9.8 6.9,10.4 6.5,10.9L5.2,9.8L6.7,8.2L7.9,9.3M4.8,13.7C4.4,14.5 4.1,15.3 3.8,16L2,15.3L2.9,13L4.8,13.7M11.5,16.3L13.3,16.9L13.6,18.9L11.6,18.4C11.6,18.2 11.5,17.5 11.5,16.3Z" />
+      <svg class="rails" style="width: 24px; height: 24px" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M19.8,16.7C19.8,16.7 21.6,16.5 21.6,14.3C21.6,12.1 19.5,11.8 19.5,11.8H15.7V19H17.6V17.3L19.3,19H22L19.8,16.7M19,15.3H17.5V13.7H19C19,13.7 19.4,13.9 19.4,14.5C19.5,15.1 19,15.3 19,15.3M21.3,8.2V8.4C13.2,6.1 10,13.2 10.6,18.7C10.6,18.7 4.9,18.7 4.3,18.7C5,13.3 11.8,2.6 21.3,8.2M20.5,6.9C19.8,6.6 19.1,6.3 18.4,6.1L18.5,4.8L20.6,5.6L20.5,6.9M18.5,8.7C19.2,8.7 19.9,8.8 20.6,9L20.5,10.2L18.7,10L18.5,8.7M13.9,5.8L13.5,4.6L15.6,4.4L16,5.7C15.8,5.7 14.1,5.8 13.9,5.8M15.2,9.5C15.6,9.3 16.3,9 17.2,8.8L17.6,10L15.8,10.7L15.2,9.5M11.8,6.5C11.2,6.8 10.6,7.1 10,7.5L9.2,6.2L11,5.2L11.8,6.5M14.3,10.1L15.1,11.3L14,12.6L12.9,11.6C13.2,11 13.7,10.5 14.3,10.1M11.6,15C11.7,14.2 11.9,13.5 12.2,12.7L13.4,13.7L13.1,15.6L11.6,15M7.9,9.3C7.4,9.8 6.9,10.4 6.5,10.9L5.2,9.8L6.7,8.2L7.9,9.3M4.8,13.7C4.4,14.5 4.1,15.3 3.8,16L2,15.3L2.9,13L4.8,13.7M11.5,16.3L13.3,16.9L13.6,18.9L11.6,18.4C11.6,18.2 11.5,17.5 11.5,16.3Z"
+        />
       </svg>
     </p>
 
-    <div class="about container">
-      <h1 class="display-5 text-center">About</h1>
+    <div class="container my-3">
+      <h1 class="display-4 text-center">About</h1>
       <p class="text-center">
-        I am Hubert. Hi, nice to meet you. For now I am reconstructing this website, so there is not much content here at the moment. 
-        I'm a junior developer programming in ruby on rails and Vue, two wonderful frameworks, in which I'm still a newbie, but I try to learn them as fast as I can.  
+        Here I will talk about me and my experience with programming 
+      </p>
+      <h2 class="display-6 text-center">Whoami</h2>
+      <p class="text-center">
+        For those who don't now, my name is Hubert. I'm 19 at the moment. Whoami is actually a command on linux you can use to find out, which user you are. Just a silly joke :)
+      </p>
+      <h2 class="display-6 text-center">Experience with programming</h2>
+      <p class="text-wrap">
+        Everything started with visual basic actually. I had to make a calculator as a ending project. At that time being 15 and having no experience in programming, I was very slow developing it.
+        In the end the calculator worked well. Then I went to an informatics school and started learning programming with java. To this day I use java for a personal project. 
+        Right now I am actively using Ruby on Rails and Vue at work.
       </p>
     </div>
 
-    <div class="clock-container">
-      <div class="clock">
-        <div class="hour">
-          <div class="hr" id="hr"></div>
-        </div>
-        <div class="min">
-          <div class="mn" id="mn"></div>
-        </div>
-        <div class="sec">
-          <div class="sc" id="sc"></div>
-        </div>
-      </div>
+    <div class="container my-3">
+      <h1 class="display-4 text-center">Projects</h1>
+      <p class="text-wrap">
+        I did several projects. Whether it were (mostly) school projects or even some projects on my own. Most of them are not finished. 
+        Of course you rarely finish a project. Why I still don't show my projects ? Simple answer: they're not in a presentable state most of the time.
+        Over the course of time I will eventually show some things I have done. At this moment I am finishing my own website, therefore I own a platform to show off my work.
+      </p>
     </div>
-    <div id="digitalClock">
-      <div id="hour"></div><div id="minutes"></div><div id="seconds"></div>
-    </div>
-
   </body>
 </html>

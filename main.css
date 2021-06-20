@@ -5,7 +5,7 @@
 }
 
 :root{
-	--clock-height-and-weight:400px;
+	--clock-height-and-weight:100px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -149,3 +149,9 @@ body.ruby-theme{
 	font-size: calc(var(--clock-height-and-weight) / 6.25);
 	margin-top: 20px;
 }
+/*
+.project-container{
+	width: 320px;
+  padding: 10px;
+	border: 1px solid black;
+}*/
