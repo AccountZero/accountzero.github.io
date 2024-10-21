@@ -1,40 +1,29 @@
 *{
 	margin:0;
 	padding:0;
-	box-sizing: border-box;	
-}
-
-:root{
-	--clock-height-and-weight:100px;
-}
-
-@media only screen and (max-width: 1000px) {
-  :root{
-		--clock-height-and-weight:40vw;
-	}
+	box-sizing: border-box;
+	color: var(--text-color)
 }
 
 body{
 	height: 100%;
 	width: 100%;
-	--accent-color:#35495e;
-	--background-color-1:#42b88e;
-	--background-color-2:#429ab8;
-	--text-color:#1c2631;
-	--transition-delay:1s;
-	transition: var(--transition-delay);
+	--background-color-1:#35495e;
+	--background-color-2:#1c2631;
+	--text-color:#42b88e; 
+	--transition-duration: 2s;
+	transition-duration: var(--transition-duration);
 	background-image: linear-gradient(135deg, var(--background-color-1), var(--background-color-2)) !important;
 	background-repeat: no-repeat;
   background-attachment: fixed;
-	color:var(--text-color);
+	color: var(--text-color);
 }
 
 body.ruby-theme{
-	--accent-color:#820c02;
 	--background-color-1: #fff;
 	--background-color-2: #ffe8e6;
 	--text-color:#c91403;
-	transition: var(--transition-delay);
+	transition-duration: var(--transition-duration);
 	background-image: linear-gradient(135deg, var(--background-color-1), var(--background-color-2)) !important;
 	color:var(--text-color);
 }
@@ -42,7 +31,7 @@ body.ruby-theme{
 .nav-link{
 	background-color:var(--background-color-1);
 	color:var(--text-color);
-	transition: var(--transition-delay);
+	transition-duration: var(--transition-duration);
 }
 
 .nav-link:hover{
@@ -65,93 +54,3 @@ body.ruby-theme{
 .ruby-theme .rails{
 	display:inline;
 }
-
-.clock-container{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.clock{
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	position:relative;
-	width: var(--clock-height-and-weight);
-	height: var(--clock-height-and-weight);
-	border: calc(var(--clock-height-and-weight) / 50) solid var(--accent-color);
-	border-radius: 50%;
-}
-
-.clock::before{
-	z-index: 10000;
-	content: '';
-	position: absolute;
-	width:calc(var(--clock-height-and-weight) / 25);
-	height:calc(var(--clock-height-and-weight) / 25);
-	background-color: var(--accent-color);
-	border-radius: 50%;
-}
-
-.hour, .min, .sec{
-	position: absolute;
-}
-
-.hour, .hr{
-	height: calc(var(--clock-height-and-weight) / 2);
-	width: calc(var(--clock-height-and-weight) / 2);
-}
-
-.min, .mn{
-	height: calc((var(--clock-height-and-weight) / 2) * 1.15);
-	width: calc((var(--clock-height-and-weight) / 2) * 1.15);
-}
-
-.sec, .sc{
-	height: calc((var(--clock-height-and-weight) / 2) * 1.25);
-	width: calc((var(--clock-height-and-weight) / 2) * 1.25);
-}
-
-.hr, .mn, .sc{
-	display:flex;
-	justify-content: center;
-	position: absolute;
-}
-
-.hr::before{
-	content: '';
-	position: absolute;
-	width: calc(var(--clock-height-and-weight) / 50);
-	height: calc(var(--clock-height-and-weight) / 4);
-	background: var(--accent-color);
-}
-
-.mn::before{
-	content: '';
-	position: absolute;
-	width: calc(var(--clock-height-and-weight) / 100);
-	height: calc((var(--clock-height-and-weight) / 4) * 1.1);
-	background: var(--accent-color);
-}
-
-.sc::before{
-	content: '';
-	position: absolute;
-	width: calc(var(--clock-height-and-weight) / 200);
-	height: calc((var(--clock-height-and-weight) / 4) * 1.2);
-	background: var(--text-color);
-}
-
-#digitalClock{
-	display:flex;
-	justify-content: center;
-	color:var(--accent-color);
-	font-size: calc(var(--clock-height-and-weight) / 6.25);
-	margin-top: 20px;
-}
-/*
-.project-container{
-	width: 320px;
-  padding: 10px;
-	border: 1px solid black;
-}*/

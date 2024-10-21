@@ -30,29 +30,6 @@
   </head>
   <body>
 
-    <div class="position-relative">
-      <div class="position-absolute top-0 end-0 m-3">
-        <div class="clock-container">
-          <div class="clock">
-            <div class="hour">
-              <div class="hr" id="hr"></div>
-            </div>
-            <div class="min">
-              <div class="mn" id="mn"></div>
-            </div>
-            <div class="sec">
-              <div class="sc" id="sc"></div>
-            </div>
-          </div>
-        </div>
-        <div id="digitalClock">
-          <div id="hour"></div>
-          <div id="minutes"></div>
-          <div id="seconds"></div>
-        </div>
-      </div>
-    </div>
-
     <ul class="nav sticky-top nav justify-content-center">
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
@@ -70,11 +47,6 @@
         <a class="nav-link theme-toggle" href="#">change theme</a>
       </li>
     </ul>
-
-    <h1 class="display-1 text-center m-2">Welcome to my website !</h1>
-    <p class="text-center">
-      Hello fellow reader. This site is under developement, therefore you might see some unfinished work for now. It is a coincidence, that you have found this website.
-    </p>
     <p class="text-center">
       Chosen theme:
       <svg class="vue" style="width: 24px; height: 24px" viewBox="0 0 24 24">
@@ -92,28 +64,79 @@
     </p>
 
     <div class="container my-3">
-      <h1 class="display-4 text-center">About</h1>
+      <h2 class="display-2 text-center">Whoami</h2>
       <p class="text-center">
-        Here I will talk about me and my experience with programming 
+        My name is Hubert, and I am a Junior Software Developer with a strong passion for automotive technology and fitness. 
       </p>
-      <h2 class="display-6 text-center">Whoami</h2>
-      <p class="text-center">
-        For those who don't now, my name is Hubert. I'm 19 at the moment. Whoami is actually a command on linux you can use to find out, which user you are. Just a silly joke :)
+      <h2 class="display-2 text-center">Experience with programming</h2>
+      <p class="text-wrap"></p>
+        TL;DR: I am a Full Stack Developer specializing in Ruby on Rails and HAML, with experience in Java, JavaScript, and Vue.js. I also have foundational knowledge of Haskell and Python.
+        <br><br>
+        Down here you will find a timeline of my experience.
       </p>
-      <h2 class="display-6 text-center">Experience with programming</h2>
+      <h3 class="display-6 text-center">First Project</h3>
       <p class="text-wrap">
-        Everything started with visual basic actually. I had to make a calculator as a ending project. At that time being 15 and having no experience in programming, I was very slow developing it.
-        In the end the calculator worked well. Then I went to an informatics school and started learning programming with java. To this day I use java for a personal project. 
-        Right now I am actively using Ruby on Rails and Vue at work.
+        At the age of 15, I created my first application—a calculator—using Visual Basic for Android, which earned me a commendable grade. 
+        Although I initially struggled with programming speed, I developed a strong interest in software creation, ultimately leading me to pursue a career as a software developer.
+      </p>
+      <h3 class="display-6 text-center">Java</h3>
+      <p class="text-wrap">
+        I began my programming journey with Java at 16, focusing on object-oriented programming for three years in school. 
+        While Java's verbose nature and widespread use in Swiss industry justified its inclusion in the curriculum, it also introduced me to some less ideal coding practices.
+        Currently, I primarily use Java for Minecraft plugin development. 
+        Although I've heard of advanced frameworks like Spring, at 18, I'm still developing my understanding of framework concepts and their applications. 
+        Oh and before I forget: Public static void main(String[] args) and it runs on 3 billion devices. 
+      </p>
+      <h3 class="display-6 text-center">Javascript & Vue + (Ruby) on Rails</h3>
+      <p class="text-wrap">
+        During my internship, I acquired proficiency in various programming languages that truly inspired me at the age of 19. 
+        Over time, I gained a deeper understanding of diverse concepts, significantly enhancing my programming skills. 
+      </p>
+      <h3 class="display-6 text-center">Haskell, Python & Java again</h3>
+      <p class="text-wrap">
+        My university studies reintroduced Java and introduced me to Python, a language I had long been eager to explore. 
+        While Python is known for its accessibility, it still presented unique learning challenges and opportunities. 
+        Its versatility has proven valuable, though I'm seeking more opportunities to apply it practically.
+        The curriculum also exposed me to Haskell, introducing me to functional programming—a paradigm I might not have explored independently. 
+        Haskell, arguably the most challenging language I've encountered, has significantly broadened my programming perspective.
+      </p>
+      <h3 class="display-6 text-center">Back at Rails with HAML</h3>
+      <p class="text-wrap">
+        Returning to Ruby on Rails marked a significant positive shift in my career. This return highlighted my deep appreciation for the framework.
+        My current tech stack includes:
+        <ul>
+          <li>Ruby on Rails</li>
+          <li>HAML (HTML Abstraction Markup Language) for view templating within the MVC pattern</li>
+        </ul>
+        This combination has proven highly effective, and I anticipate continuing with this stack in the near future due to its efficiency and my personal affinity for these technologies.
       </p>
     </div>
 
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container my-3">
-      <h1 class="display-4 text-center">Projects</h1>
+      <h1 class="display-2 text-center">Projects</h1>
       <p class="text-wrap">
-        I did several projects. Whether it were (mostly) school projects or even some projects on my own. Most of them are not finished. 
-        Of course you rarely finish a project. Why I still don't show my projects ? Simple answer: they're not in a presentable state most of the time.
-        Over the course of time I will eventually show some things I have done. At this moment I am finishing my own website, therefore I own a platform to show off my work.
+        I am currently working on several projects, so I don't have a formal showcase available at this time. 
+        While I do have some school projects on my GitHub, they do not fully reflect my current skills and capabilities. 
+        Stay tuned for updates!
       </p>
     </div>
   </body>
